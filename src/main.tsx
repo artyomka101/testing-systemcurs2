@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Global, css } from "@emotion/react";
 import App from "./App";
-
+import { BrowserRouter } from "react-router";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Global
@@ -10,13 +10,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         * {
           box-sizing: border-box;
         }
-
         body {
           margin: 0;
           font-family: Arial, sans-serif;
           color: #111318;
         }
-
         button,
         input {
           font: inherit;
@@ -29,6 +27,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         }
       `}
     />
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );
