@@ -60,7 +60,3 @@ export function StatPage() {
 export function ProfilePage() {
   return <h1>Профиль</h1>;
 }
-
-export function GradesPage() {
-  return <h1>Успеваемость</h1>;
-}
