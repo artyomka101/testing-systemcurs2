@@ -1,11 +1,28 @@
-export function AdminPage() {
+import { useNavigate } from 'react-router';
+
+type AdminPageProps = {
+  logout: () => void;
+};
+export function AdminPage({ logout }: AdminPageProps) {
+  const navigate = useNavigate();
+ 
+  function handleLogout() {
+    logout();
+    navigate('/login', { replace: true });
+  }
+ 
   return (
-    <>
-    <h1>Главная страница</h1>
-    <p>Добро пожаловать в админскую панель!</p>
-    </>
+    <main>
+      <h1>Личный кабинет администратора</h1>
+      <p>Страница находится в разработке.</p>
+ 
+      <button type="button" onClick={handleLogout}>
+        Выйти
+      </button>
+    </main>
   );
 }
+
 
 export function TestManagementPage() {
   return (
